@@ -1,0 +1,18 @@
+{
+  "name": "OpenManus Codespace",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "context": ".."
+  },
+  "settings": {
+    "terminal.integrated.shell.linux": "/bin/bash",
+    "python.defaultInterpreterPath": ".venv/bin/python"
+  },
+  "extensions": [
+    "ms-python.python",
+    "ms-vscode.cpptools",
+    "esbenp.prettier-vscode"
+  ],
+  "postCreateCommand": "uv venv --python 3.12 && uv pip install -r requirements.txt",
+  "remoteUser": "vscode"
+}
